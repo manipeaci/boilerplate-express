@@ -1,6 +1,9 @@
 {
 	"name": "fcc-learn-node-with-express",
 	"version": "14.16.0",
+	"engines": {
+		"node" : "14.x"
+	},
 	"dependencies": {
 		"express": "^4.14.0",
 		"body-parser": "^1.15.2",
