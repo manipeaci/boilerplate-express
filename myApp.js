@@ -11,8 +11,16 @@ app.use(function (req, res, next){
     next()
 })
 
+function getCurrentTimeString(){
+    return new Date().toString();
+}
 
-
+app.get('/now', (req, res, next) => {
+    req.time = getCurrentTimeString();
+    next();
+}, (req, res) => {
+    res.json({time : req.time})
+})
 
 app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/views/index.html`);
